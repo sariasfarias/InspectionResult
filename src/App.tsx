@@ -1,5 +1,5 @@
 import './App.css';
-import { RestaurantCard } from './components/RestaurantCard';
+import { RestaurantCardListContainer } from './components/RestaurantListContainer';
 
 function App() {
   const data = {
@@ -9,11 +9,13 @@ function App() {
     restaurantZipCode: "98105",
     restaurantInspectionResult: "Unsatisfactory",
     restaurantInspectionDate: "2023-03-02T00:00:00.000",
-  }
+  };
+
+  const dataList = Array(6).fill(data);
 
   return (
     <div className="App">
-      <RestaurantCard {...data}/>
+      <RestaurantCardListContainer restaurantCardList={dataList}/>
     </div>
   );
 }

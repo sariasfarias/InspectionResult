@@ -6,3 +6,7 @@ export interface IRestaurantCard {
     restaurantInspectionResult: string;
     restaurantInspectionDate: string;
 }
+
+export interface IRestaurantCardList {
+    restaurantCardList: IRestaurantCard[];
+}
