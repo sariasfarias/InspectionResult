@@ -1,0 +1,47 @@
+$size:150px;
+
+.restaurant-card{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    border-radius: $size;
+    margin-bottom: 30px;
+    background-color: #FFF;
+    margin: 10px;
+    @media (min-width: 680px) {
+        flex-direction: row;
+        padding-left:$size + 30;
+        padding-right: $size/2;
+    }
+
+    &__header{
+        border-right: none;
+        border-bottom: 2px solid #CDE;
+        padding: 20px;
+        @media (min-width: 680px) {
+            border-right: 2px solid #CDE;
+            border-bottom: none;
+        }
+    }
+    &__name{
+        font-size: 24px;
+        color: #428bca;
+    }
+    &__description{
+        color: #888;
+    }
+    &__info{
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    &__item{
+        padding: 2px;
+        &__Unsatisfactory{
+            color: red;
+            display: contents;
+        }
+    }
+}
+  
