@@ -5,20 +5,20 @@ describe('RestaurantCardList', () => {
   it('should render a list of restaurant cards', () => {
     const restaurantList= [
       {
-        restaurantName: 'Test Restaurant 1',
-        restaurantDescription: 'Test Description 1',
-        restaurantCity: 'Test City 1',
-        restaurantZipCode: '12345',
-        restaurantInspectionResult: 'Pass',
-        restaurantInspectionDate: '2022-03-15T13:30:00.000Z',
+        name: 'Test Restaurant 1',
+        description: 'Test Description 1',
+        city: 'Test City 1',
+        zip_code: '12345',
+        inspection_result: 'Pass',
+        inspection_date: '2022-03-15T13:30:00.000Z',
       },
       {
-        restaurantName: 'Test Restaurant 2',
-        restaurantDescription: 'Test Description 2',
-        restaurantCity: 'Test City 2',
-        restaurantZipCode: '67890',
-        restaurantInspectionResult: 'Fail',
-        restaurantInspectionDate: '2022-04-01T10:00:00.000Z',
+        name: 'Test Restaurant 2',
+        description: 'Test Description 2',
+        city: 'Test City 2',
+        zip_code: '67890',
+        inspection_result: 'Fail',
+        inspection_date: '2022-04-01T10:00:00.000Z',
       },
     ];
 

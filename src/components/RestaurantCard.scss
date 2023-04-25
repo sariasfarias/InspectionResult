@@ -4,7 +4,7 @@ $size:150px;
     align-items: center;
     display: flex;
     flex-direction: column;
-    border-radius: $size;
+    border-radius: $size/2;
     margin-bottom: 30px;
     background-color: #FFF;
     margin: 10px;
@@ -12,6 +12,7 @@ $size:150px;
         flex-direction: row;
         padding-left:$size + 30;
         padding-right: $size/2;
+        border-radius: $size;
     }
 
     &__header{
@@ -21,6 +22,7 @@ $size:150px;
         @media (min-width: 680px) {
             border-right: 2px solid #CDE;
             border-bottom: none;
+            width: 25%;
         }
     }
     &__name{
