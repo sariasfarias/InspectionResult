@@ -10,3 +10,31 @@ export interface IRestaurantCard {
 export interface IRestaurantCardList {
     restaurantCardList: IRestaurantCard[];
 }
+
+export interface ISearchBox{
+    data: IRestaurantCard[];
+    setData: Function;
+    options: TSearchOption[];
+    selection: TSearchOption;
+    setSelection: Function;
+    searchText: string;
+    setSearchText: Function
+}
+
+export interface ISearchContainer{
+    data: IRestaurantCard[];
+    setData: Function;
+}
+
+type TSearchOption = {
+    value: string; 
+    label: string;
+}
+
+export interface ISearchDropdown{
+    options: TSearchOption[];
+    selection: TSearchOption;
+    setSelection: Function;
+    showListOptions: boolean;
+    setShowListOptions: Function
+}

@@ -1,0 +1,13 @@
+.search-container{
+    background: #fff;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    margin: 20px;
+    box-shadow: 0 8px 6px -10px #b3c6ff; 
+    @media (min-width: 680px) {
+            flex-direction: row;
+    } 
+}

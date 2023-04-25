@@ -22,14 +22,13 @@ describe("getRestaurantsInformation", () => {
       },
     ];
     const setDataMock = jest.fn();
-    const props = { setData: setDataMock };
 
     global.fetch = jest.fn(() => Promise.resolve({
         json: () => Promise.resolve(mockJson),
     })
     ) as unknown as jest.MockedFunction<typeof fetch>;
 
-    await getRestaurantsInformation(props);
+    await getRestaurantsInformation(setDataMock);
 
     expect(global.fetch).toHaveBeenCalledWith(
       "https://data.kingcounty.gov/resource/f29f-zza5.json"
@@ -39,15 +38,26 @@ describe("getRestaurantsInformation", () => {
 
   it("should set the data to an empty array if there's an error", async () => {
     const setDataMock = jest.fn();
-    const props = { setData: setDataMock };
 
     global.fetch = jest.fn(() => Promise.reject("API is down")) as unknown as jest.MockedFunction<typeof fetch>;
 
-    await getRestaurantsInformation(props);
+    await getRestaurantsInformation(setDataMock);
 
     expect(global.fetch).toHaveBeenCalledWith(
       "https://data.kingcounty.gov/resource/f29f-zza5.json"
     );
     expect(setDataMock).toHaveBeenCalledWith([]);
+  });
+
+  it("should add query param at url if exists", async () => {
+    const setDataMock = jest.fn();
+
+    global.fetch = jest.fn(() => Promise.reject("API is down")) as unknown as jest.MockedFunction<typeof fetch>;
+
+    await getRestaurantsInformation(setDataMock, '?zip_code=98105');
+
+    expect(global.fetch).toHaveBeenCalledWith(
+      "https://data.kingcounty.gov/resource/f29f-zza5.json?zip_code=98105"
+    );
   });
 });
