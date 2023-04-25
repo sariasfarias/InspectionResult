@@ -1,7 +1,7 @@
 import { render, screen, fireEvent } from '@testing-library/react';
-import { RestaurantCardListContainer } from './RestaurantListContainer';
+import { RestaurantListPagination } from './RestaurantListPagination';
 
-describe('RestaurantCardListContainer', () => {
+describe('RestaurantListPagination', () => {
     
     const restaurantData = {
         restaurantName: 'Test Restaurant 1',
@@ -17,21 +17,21 @@ describe('RestaurantCardListContainer', () => {
       };
 
   it('should a paginated message', () => {
-    render(<RestaurantCardListContainer {...props} />);
+    render(<RestaurantListPagination {...props} />);
     expect(screen.getByText('Page 1 of 2')).toBeInTheDocument();
   });
   it('should disable prev button at beginning', () => {
-    render(<RestaurantCardListContainer {...props} />);
+    render(<RestaurantListPagination {...props} />);
     const prevButton = screen.getByText('Prev');
     expect(prevButton).toHaveProperty('disabled', true);
   });
   it('should enable next button at beginning', () => {
-    render(<RestaurantCardListContainer {...props} />);
+    render(<RestaurantListPagination {...props} />);
     const nextButton = screen.getByText('Next');
     expect(nextButton).toHaveProperty('disabled', false);
   });
   it('should enable prev button when clicking Next', () => {
-    render(<RestaurantCardListContainer {...props} />);
+    render(<RestaurantListPagination {...props} />);
     const nextButton = screen.getByText('Next');
     nextButton.click();
     expect(nextButton).toHaveProperty('disabled', false);

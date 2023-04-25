@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { IRestaurantCardList } from "../types";
 import { RestaurantCardList } from "./RestaurantCardList";
-import './RestaurantCardListContainer.scss';
+import './RestaurantListPagination.scss';
 
-export function RestaurantCardListContainer(props:IRestaurantCardList){
+export function RestaurantListPagination(props:IRestaurantCardList){
     const [currentPage, setCurrentPage] = useState(1);
 
     const pageNumberLimit = 10;
