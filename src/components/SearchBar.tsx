@@ -15,6 +15,7 @@ export function SearchBar (props:ISearchBox){
 
     useEffect(() => {
         getRestaurantsInformation(props.setData, queryParam);
+        props.setSearchText(props.selection.label + " : " + props.searchText)
     },[queryParam]);
       
     return (
@@ -22,8 +23,9 @@ export function SearchBar (props:ISearchBox){
             <input 
                 type="text" 
                 className="search-bar__input" 
-                placeholder="Search"
+                placeholder="Search..."
                 onChange={handleOnChange}
+                onClick={() => props.setSearchText("")}
                 value={props.searchText}
             />
             <button 

@@ -12,11 +12,8 @@ export interface IRestaurantCardList {
 }
 
 export interface ISearchBox{
-    data: IRestaurantCard[];
     setData: Function;
-    options: TSearchOption[];
     selection: TSearchOption;
-    setSelection: Function;
     searchText: string;
     setSearchText: Function
 }

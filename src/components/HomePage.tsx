@@ -12,7 +12,7 @@ export function HomePage(){
   },[]);
   
   const errorMessage = (
-    <h1>No restaurants to show</h1>
+    <h1>No results to display</h1>
   );
 
   return (

@@ -35,11 +35,8 @@ export function SearchContainer (props:ISearchContainer){
     return (
         <div className="search-container">
             <SearchBar 
-                data={props.data} 
                 setData={props.setData} 
-                options={options} 
-                selection={selection} 
-                setSelection={setSelection} 
+                selection={selection}  
                 searchText={searchText} 
                 setSearchText={setSearchText}/>
             <SearchDropdown 
