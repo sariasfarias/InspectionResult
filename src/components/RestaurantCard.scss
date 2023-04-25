@@ -45,6 +45,14 @@ $size:150px;
             color: red;
             display: contents;
         }
+        &__Satisfactory{
+            color: green;
+            display: contents;
+        }
+        &__Complete{
+            color: orange;
+            display: contents;
+        }
     }
 }
   

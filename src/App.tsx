@@ -1,5 +1,5 @@
 import './App.css';
-import { RestaurantCardListContainer } from './components/RestaurantListContainer';
+import { RestaurantListPagination } from './components/RestaurantListPagination';
 
 function App() {
   const data = {
@@ -7,15 +7,14 @@ function App() {
     restaurantDescription: "Seating 0-12 - Risk Category III",
     restaurantCity: "SEATTLE",
     restaurantZipCode: "98105",
-    restaurantInspectionResult: "Unsatisfactory",
+    restaurantInspectionResult: "Satisfactory",
     restaurantInspectionDate: "2023-03-02T00:00:00.000",
   };
 
-  const dataList = Array(6).fill(data);
-
+  const dataList = Array(26).fill(data);
   return (
     <div className="App">
-      <RestaurantCardListContainer restaurantCardList={dataList}/>
+      <RestaurantListPagination restaurantCardList={dataList}/>
     </div>
   );
 }
