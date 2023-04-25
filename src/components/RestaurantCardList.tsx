@@ -8,12 +8,12 @@ export function RestaurantCardList(props:IRestaurantCardList){
                 props.restaurantCardList.map((restaurant, index) => 
                     <RestaurantCard
                         key={index}
-                        restaurantName={restaurant.restaurantName}
-                        restaurantDescription={restaurant.restaurantDescription}
-                        restaurantCity={restaurant.restaurantCity}
-                        restaurantZipCode={restaurant.restaurantZipCode}
-                        restaurantInspectionResult={restaurant.restaurantInspectionResult}
-                        restaurantInspectionDate={restaurant.restaurantInspectionDate}
+                        name={restaurant.name}
+                        description={restaurant.description}
+                        city={restaurant.city}
+                        zip_code={restaurant.zip_code}
+                        inspection_result={restaurant.inspection_result}
+                        inspection_date={restaurant.inspection_date}
                     />
                 )
             }

@@ -1,10 +1,10 @@
 export interface IRestaurantCard {
-    restaurantName: string;
-    restaurantDescription: string;
-    restaurantCity: string;
-    restaurantZipCode: string;
-    restaurantInspectionResult: string;
-    restaurantInspectionDate: string;
+    name: string;
+    description: string;
+    city: string;
+    zip_code: string;
+    inspection_result: string;
+    inspection_date: string;
 }
 
 export interface IRestaurantCardList {
