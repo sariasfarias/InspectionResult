@@ -4,8 +4,9 @@ import { SearchContainer } from './SearchContainer';
 describe('SearchContainer', () => {
   it('renders the SearchBar and SearchDropdown components', () => {
     const mockSetData = jest.fn();
+    const mockSetQueryParam = jest.fn();
     const mockData :any = [];
-    render(<SearchContainer data={mockData} setData={mockSetData} />);
+    render(<SearchContainer setQueryParam={mockSetQueryParam} data={mockData} setData={mockSetData} />);
 
     // Check that the SearchBar and SearchDropdown components are present
     expect(screen.getByPlaceholderText('Search...')).toBeInTheDocument();
