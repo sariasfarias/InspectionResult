@@ -1,0 +1,41 @@
+.search-bar{
+    padding: 10px;
+    width: 80%;
+    text-align: end;
+    display: inherit;
+    &__input{
+        width: 100%;
+        height: 100%;
+        border: 0px;
+        font-size: 16px;
+        color: #6f768d;
+        text-align: center;
+        &:focus-visible{
+            outline: none;
+        }
+        @media (min-width: 680px) {
+            width: 100%;
+            padding-left: 20px;
+            padding-right: 38px;
+        }
+    }
+    &__icon{
+        color: #428bca;
+        font-size: 100%;
+        @media (min-width: 680px) {
+            font-size: 150%;
+        }
+    }
+    &__button{
+        border: none;
+        background: transparent;
+        padding-right: 15px;
+        cursor: pointer;
+        :hover{
+            color: #6f768d;
+        }
+        :active{
+            color: #000;
+        }
+    }    
+}
