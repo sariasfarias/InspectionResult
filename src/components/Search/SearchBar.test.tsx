@@ -78,7 +78,7 @@ describe('SearchBar', () => {
     fireEvent.click(buttonElement);
     expect(mockSetSearchText).toHaveBeenCalledWith('All');
   });
-  it('should not call setQueryParam with All filter on button click', () => {
+  it('should setQueryParam with All filter on button click', () => {
     render(
       <SearchBar
         setSearchText={mockSetSearchText}
@@ -86,6 +86,22 @@ describe('SearchBar', () => {
         setQueryParam={mockSetQueryParam}
         selection={{ label: 'All', value: 'all' }}
         searchText="searchText"
+      />
+    );
+
+    const buttonElement = screen.getByRole('button');
+    fireEvent.click(buttonElement);
+    expect(mockSetQueryParam).toHaveBeenCalled();
+    expect(mockSetSearchText).toHaveBeenCalledWith('All');
+  });
+  it('should not setQueryParam if All filter if All filter was used before', () => {
+    render(
+      <SearchBar
+        setSearchText={mockSetSearchText}
+        setData={mockSetData}
+        setQueryParam={mockSetQueryParam}
+        selection={{ label: 'All', value: 'all' }}
+        searchText="All"
       />
     );
 

@@ -11,7 +11,9 @@ export function SearchBar (props:ISearchBox){
 
     const handleOnClick = () => {
         if (props.selection.label === "All"){
+            if (props.searchText === "All") return;
             props.setSearchText("All");
+            props.setQueryParam("");
             return;
         }
         props.setQueryParam("?"+ props.selection.value + "=" + props.searchText);
