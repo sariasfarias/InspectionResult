@@ -16,11 +16,13 @@ export interface ISearchBox{
     selection: TSearchOption;
     searchText: string;
     setSearchText: Function
+    setQueryParam: Function;
 }
 
 export interface ISearchContainer{
     data: IRestaurantCard[];
     setData: Function;
+    setQueryParam: Function;
 }
 
 type TSearchOption = {

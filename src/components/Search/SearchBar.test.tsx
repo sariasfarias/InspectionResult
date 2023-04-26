@@ -4,6 +4,7 @@ import { getRestaurantsInformation } from '../../Api';
 
 const mockSetSearchText = jest.fn();
 const mockSetData = jest.fn();
+const mockSetQueryParam = jest.fn();
 
 jest.mock('../../Api', () => ({
   getRestaurantsInformation: jest.fn()
@@ -15,6 +16,7 @@ describe('SearchBar', () => {
       <SearchBar
         setSearchText={mockSetSearchText}
         setData={mockSetData}
+        setQueryParam={mockSetQueryParam}
         selection={{ label: 'Name', value: 'name' }}
         searchText="searchText"
       />
@@ -28,10 +30,11 @@ describe('SearchBar', () => {
   });
 
   it('calls setSearchText function on input change', () => {
-    const { getByPlaceholderText, getByText } = render(
+    const { getByPlaceholderText } = render(
       <SearchBar
         setSearchText={mockSetSearchText}
         setData={mockSetData}
+        setQueryParam={mockSetQueryParam}
         selection={{ label: 'Name', value: 'name' }}
         searchText=""
       />
@@ -44,11 +47,12 @@ describe('SearchBar', () => {
     expect(mockSetSearchText).toHaveBeenCalledWith('New search text');
   });
 
-  it('calls getRestaurantsInformation function with the correct query parameter on button click', () => {
+  it('set queryParam on button click', () => {
     render(
       <SearchBar
         setSearchText={mockSetSearchText}
         setData={mockSetData}
+        setQueryParam={mockSetQueryParam}
         selection={{ label: 'Name', value: 'name' }}
         searchText="searchText"
       />
@@ -57,6 +61,36 @@ describe('SearchBar', () => {
     const buttonElement = screen.getByRole('button');
     fireEvent.click(buttonElement);
 
-    expect(getRestaurantsInformation).toHaveBeenCalledWith(mockSetData, '?name=searchText');
+    expect(mockSetQueryParam).toHaveBeenCalledWith('?name=searchText');
+  });
+  it('setSearchText to All with All filter and random text on button click', () => {
+    render(
+      <SearchBar
+        setSearchText={mockSetSearchText}
+        setData={mockSetData}
+        setQueryParam={mockSetQueryParam}
+        selection={{ label: 'All', value: 'all' }}
+        searchText="searchText"
+      />
+    );
+
+    const buttonElement = screen.getByRole('button');
+    fireEvent.click(buttonElement);
+    expect(mockSetSearchText).toHaveBeenCalledWith('All');
+  });
+  it('should not call setQueryParam with All filter on button click', () => {
+    render(
+      <SearchBar
+        setSearchText={mockSetSearchText}
+        setData={mockSetData}
+        setQueryParam={mockSetQueryParam}
+        selection={{ label: 'All', value: 'all' }}
+        searchText="searchText"
+      />
+    );
+
+    const buttonElement = screen.getByRole('button');
+    fireEvent.click(buttonElement);
+    expect(mockSetQueryParam).not.toHaveBeenCalled();
   });
 });

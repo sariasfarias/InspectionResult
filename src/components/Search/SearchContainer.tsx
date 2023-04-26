@@ -38,7 +38,8 @@ export function SearchContainer (props:ISearchContainer){
                 setData={props.setData} 
                 selection={selection}  
                 searchText={searchText} 
-                setSearchText={setSearchText}/>
+                setSearchText={setSearchText}
+                setQueryParam={props.setQueryParam}/>
             <SearchDropdown 
                 options={options} 
                 selection={selection} 
