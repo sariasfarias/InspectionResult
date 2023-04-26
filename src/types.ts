@@ -35,3 +35,7 @@ export interface ISearchDropdown{
     showListOptions: boolean;
     setShowListOptions: Function
 }
+
+export interface IChart {
+    data: IRestaurantCard[];
+}

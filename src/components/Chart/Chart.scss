@@ -1,0 +1,9 @@
+.chart{
+    position: relative;
+    @media (min-width: 680px) {
+        position: fixed;
+        width: 28%;
+        padding-left: 20px;
+        margin-top: 120px;
+    }
+}

@@ -9,7 +9,7 @@ describe('RestaurantCardList', () => {
         description: 'Test Description 1',
         city: 'Test City 1',
         zip_code: '12345',
-        inspection_result: 'Pass',
+        inspection_result: 'Satisfactory',
         inspection_date: '2022-03-15T13:30:00.000Z',
       },
       {
@@ -17,7 +17,7 @@ describe('RestaurantCardList', () => {
         description: 'Test Description 2',
         city: 'Test City 2',
         zip_code: '67890',
-        inspection_result: 'Fail',
+        inspection_result: 'Unsatisfactory',
         inspection_date: '2022-04-01T10:00:00.000Z',
       },
     ];
