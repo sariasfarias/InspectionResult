@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { getRestaurantsInformation } from "../Api";
 import { IRestaurantCard } from "../types";
-import { RestaurantListPagination } from "./RestaurantListPagination";
-import { SearchContainer } from "./SearchContainer";
+import { RestaurantListPagination } from "./Restaurant/RestaurantListPagination";
+import { SearchContainer } from "./Search/SearchContainer";
 
 export function HomePage(){
   const [data, setData] = useState<IRestaurantCard[]>([]);

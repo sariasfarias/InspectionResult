@@ -1,4 +1,4 @@
-import { ISearchDropdown } from "../types";
+import { ISearchDropdown } from "../../types";
 import './SearchDropdown.scss'
 
 export function SearchDropdown (props:ISearchDropdown){

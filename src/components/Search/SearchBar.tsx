@@ -1,8 +1,8 @@
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useEffect, useState } from 'react';
-import { getRestaurantsInformation } from '../Api';
-import { ISearchBox } from '../types';
+import { getRestaurantsInformation } from '../../Api';
+import { ISearchBox } from '../../types';
 import './SearchBar.scss';
 
 export function SearchBar (props:ISearchBox){

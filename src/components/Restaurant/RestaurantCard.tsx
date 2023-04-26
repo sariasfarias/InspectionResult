@@ -1,4 +1,4 @@
-import { IRestaurantCard } from '../types';
+import { IRestaurantCard } from '../../types';
 import './RestaurantCard.scss';
 
 export function RestaurantCard(props:IRestaurantCard){

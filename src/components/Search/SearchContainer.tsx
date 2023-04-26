@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { ISearchContainer } from '../types';
+import { ISearchContainer } from '../../types';
 import { SearchBar } from './SearchBar';
 import './SearchContainer.scss';
 import { SearchDropdown } from './SearchDropdown';

@@ -1,12 +1,11 @@
 import { render, fireEvent, screen } from '@testing-library/react';
 import { SearchBar } from './SearchBar';
-import { getRestaurantsInformation } from '../Api';
-import userEvent from '@testing-library/user-event';
+import { getRestaurantsInformation } from '../../Api';
 
 const mockSetSearchText = jest.fn();
 const mockSetData = jest.fn();
 
-jest.mock('../Api', () => ({
+jest.mock('../../Api', () => ({
   getRestaurantsInformation: jest.fn()
 }));
 

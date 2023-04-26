@@ -1,4 +1,4 @@
-import { IRestaurantCardList } from "../types";
+import { IRestaurantCardList } from "../../types";
 import { RestaurantCard } from "./RestaurantCard";
 
 export function RestaurantCardList(props:IRestaurantCardList){
