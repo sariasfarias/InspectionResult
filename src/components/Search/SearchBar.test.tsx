@@ -1,6 +1,7 @@
 import { render, fireEvent, screen } from '@testing-library/react';
 import { SearchBar } from './SearchBar';
 import { getRestaurantsInformation } from '../../Api';
+import userEvent from '@testing-library/user-event';
 
 const mockSetSearchText = jest.fn();
 const mockSetData = jest.fn();
@@ -108,5 +109,35 @@ describe('SearchBar', () => {
     const buttonElement = screen.getByRole('button');
     fireEvent.click(buttonElement);
     expect(mockSetQueryParam).not.toHaveBeenCalled();
+  });
+  it('should transform string with special characters to set queryParam', () => {
+    render(
+      <SearchBar
+        setSearchText={mockSetSearchText}
+        setData={mockSetData}
+        setQueryParam={mockSetQueryParam}
+        selection={{ label: 'Name', value: 'name' }}
+        searchText="#807 TUTTA BELLA"
+      />
+    );
+
+    const buttonElement = screen.getByRole('button');
+    fireEvent.click(buttonElement);
+    expect(mockSetQueryParam).toHaveBeenCalledWith('?name=%23807%20TUTTA%20BELLA');
+  });
+  it('should set QueryParam if Enter button is pressed', () => {
+    render(
+      <SearchBar
+        setSearchText={mockSetSearchText}
+        setData={mockSetData}
+        setQueryParam={mockSetQueryParam}
+        selection={{ label: 'Name', value: 'name' }}
+        searchText="#807 TUTTA BELLA"
+      />
+    );
+
+    const inputElement = screen.getByPlaceholderText("Search...");
+    userEvent.type(inputElement, "{enter}");
+    expect(mockSetQueryParam).toHaveBeenCalledWith('?name=%23807%20TUTTA%20BELLA');
   });
 });
