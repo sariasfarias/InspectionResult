@@ -15,7 +15,8 @@ export function SearchBar (props:ISearchBox){
 
     useEffect(() => {
         getRestaurantsInformation(props.setData, queryParam);
-        props.setSearchText(props.selection.label + " : " + props.searchText)
+        if (props.selection.label !== "All")
+            props.setSearchText(props.selection.label + " : " + props.searchText)
     },[queryParam]);
       
     return (

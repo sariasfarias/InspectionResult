@@ -1,0 +1,20 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    @media (min-width: 680px) {
+        flex-direction: row;
+    }
+    &__list-information{
+        width: 100%;
+        @media (min-width: 680px) {
+            width: 70%;
+        }
+    }
+    &__graphic-information{
+        width: 100%;
+        @media (min-width: 680px) {
+            width: 30%;
+        }
+    }
+    
+}

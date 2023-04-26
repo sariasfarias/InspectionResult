@@ -43,15 +43,19 @@ $size:150px;
     }
     &__item{
         padding: 2px;
+        &__Satisfactory{
+            color: blue;
+            display: contents;
+        }
         &__Unsatisfactory{
             color: red;
             display: contents;
         }
-        &__Satisfactory{
+        &__Complete{
             color: green;
             display: contents;
         }
-        &__Complete{
+        &__Incomplete{
             color: orange;
             display: contents;
         }
