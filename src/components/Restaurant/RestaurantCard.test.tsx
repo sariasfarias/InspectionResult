@@ -7,7 +7,7 @@ describe('RestaurantCard', () => {
     description: 'Test Description',
     city: 'Test City',
     zip_code: '12345',
-    inspection_result: 'Pass',
+    inspection_result: 'Unsatisfactory',
     inspection_date: '2022-03-15T13:30:00.000Z',
   };
 

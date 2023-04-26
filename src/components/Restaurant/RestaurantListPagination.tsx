@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { IRestaurantCardList } from "../types";
+import { IRestaurantCardList } from "../../types";
 import { RestaurantCardList } from "./RestaurantCardList";
 import './RestaurantListPagination.scss';
 
