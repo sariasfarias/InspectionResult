@@ -31,7 +31,7 @@ export function Chart (props: IChart) {
 
     return (
         <div className='chart'>
-            <div>{chartTittle}</div>
+            <div className='chart__title'>{chartTittle}</div>
             <Doughnut
                 data={renderData}
                 redraw={true}

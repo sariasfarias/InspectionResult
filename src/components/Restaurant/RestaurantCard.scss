@@ -10,7 +10,6 @@ $size:150px;
     margin: 10px;
     @media (min-width: 680px) {
         flex-direction: row;
-        padding-left:$size + 30;
         padding-right: $size/2;
         border-radius: $size;
     }
@@ -18,27 +17,32 @@ $size:150px;
     &__header{
         border-right: none;
         border-bottom: 2px solid #CDE;
-        padding: 20px;
+        padding: 10px 0px 10px 0px;
         @media (min-width: 680px) {
+            padding: 20px;
             border-right: 2px solid #CDE;
             border-bottom: none;
-            width: 25%;
+            width: 50%;
         }
     }
     &__name{
-        font-size: 24px;
+        font-size: 20px;
         color: #428bca;
+        @media (min-width: 680px) {
+            font-size: 24px;
+        }
     }
     &__description{
         color: #888;
     }
     &__info{
-        padding: 5px 0px 15px 0px;
+        padding: 10px 0px 10px 0px;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         @media (min-width: 680px) {
             padding: 20px;
+            width: 50%;
         }
     }
     &__item{
