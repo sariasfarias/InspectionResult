@@ -1,0 +1,29 @@
+.tag{
+    display: flex;
+    flex-direction: column;
+    @media (min-width: 680px) {
+        flex-direction: row;
+    }
+    
+    &__item{
+        background: #888;
+        margin: 5px;
+        color: white;
+        padding: 10px 0px 10px 10px;
+        border-radius: 4px;
+        display: flex;
+        flex-direction: row;
+        width: max-content;
+    }
+    &__button{
+        border: none;
+        background: transparent;
+        color: #fff;
+        font-weight: bold;
+        padding: 0px 10px 0px 5px;
+        cursor: pointer;
+        :active{
+            color: #000;
+        }
+    }  
+}

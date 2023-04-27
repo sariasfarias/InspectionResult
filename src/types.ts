@@ -14,8 +14,8 @@ export interface IRestaurantCardList {
 export interface ISearchBox{
     setData: Function;
     selection: TSearchOption;
-    searchText: string;
-    setSearchText: Function
+    searchTags: string[][];
+    setSearchTags: Function
     setQueryParam: Function;
 }
 
@@ -40,4 +40,10 @@ export interface ISearchDropdown{
 
 export interface IChart {
     data: IRestaurantCard[];
+}
+
+export interface IFilterTags{
+    searchTags: string[][];
+    setSearchTags: Function;
+    setQueryParam: Function;
 }
