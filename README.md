@@ -44,12 +44,19 @@ At first sight you can distinguish two sections:
 
 On Desktop view there are displayed as columns, on Mobile these section are displayed as rows instead of columns.
 
-Desktop image
-Mobile image
+Desktop
+![Screenshot 2023-04-27 at 12 58 20](https://user-images.githubusercontent.com/46817386/234919147-e44934a2-cfd7-4cdf-9592-4ca0a9ef1b39.png)
+
+
+Mobile
+![Screenshot 2023-04-27 at 12 58 50](https://user-images.githubusercontent.com/46817386/234919291-7b2cf103-0142-47d4-8112-e16bed60b053.png)
+
 
 ### Filter by field
 
 **The SearchContainer component allows to filter by different fields at the same time**
+![Screenshot 2023-04-27 at 12 59 52](https://user-images.githubusercontent.com/46817386/234919583-18361338-bbb9-4d95-af12-e5f742fd38f3.png)
+
 
 Add a filter:
 1. Select the field you want to filter by.
