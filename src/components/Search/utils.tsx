@@ -29,6 +29,7 @@ export const addTag = (
     searchText: string,
     setSearchTags: Function,
 ) => {
+    if(!searchText) return;
     let auxTags = searchTags;
     auxTags.push([selectionValue, searchText]);
     setSearchTags(auxTags);

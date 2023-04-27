@@ -52,4 +52,9 @@ describe('addTag', () => {
             ['zip_code', '98105'],
         ]);
     });
+    it('no add a new tag if the search text is empty', () => {
+        const searchTags = [['name', 'MAS CAFE']];
+        addTag(searchTags, 'zip_code', '', setSearchTags);
+        expect(setSearchTags).not.toHaveBeenCalled();
+    });
 });
