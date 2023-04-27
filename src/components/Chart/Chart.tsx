@@ -34,7 +34,6 @@ export function Chart (props: IChart) {
             <div className='chart__title'>{chartTittle}</div>
             <Doughnut
                 data={renderData}
-                redraw={true}
             />
         </div>
     );
