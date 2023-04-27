@@ -1,29 +1,17 @@
 import { useEffect, useState } from 'react';
 import { ISearchContainer } from '../../types';
+import { FilterTags } from './FilterTags';
 import { SearchBar } from './SearchBar';
 import './SearchContainer.scss';
 import { SearchDropdown } from './SearchDropdown';
 
 export function SearchContainer (props:ISearchContainer){
     const options = [
-        {
-            value: "all",
-            label: "All",
-        },
-        {
-            value: "name",
-            label: "Name",
-        },
-        {
-            value: "zip_code",
-            label: "Zip Code",
-        },
-        {
-            value: "inspection_result",
-            label: "Inspection Result",
-        },
+        { value: "name",label: "Name"},
+        { value: "zip_code", label: "Zip Code"},
+        { value: "inspection_result", label: "Inspection Result"},
     ];
-    const [searchText, setSearchText] = useState("");
+    const [searchTags, setSearchTags] = useState<string[][]>([]);
     const [selection, setSelection] = useState({value: "all", label: "All"});
     const [showListOptions, setShowListOptions] = useState(false);
     
@@ -33,12 +21,13 @@ export function SearchContainer (props:ISearchContainer){
     );
 
     return (
+        <>
         <div className="search-container">
             <SearchBar 
                 setData={props.setData} 
                 selection={selection}  
-                searchText={searchText} 
-                setSearchText={setSearchText}
+                searchTags={searchTags} 
+                setSearchTags={setSearchTags}
                 setQueryParam={props.setQueryParam}/>
             <SearchDropdown 
                 options={options} 
@@ -47,5 +36,13 @@ export function SearchContainer (props:ISearchContainer){
                 showListOptions={showListOptions} 
                 setShowListOptions={setShowListOptions} />
         </div>
+        <div className='search-tags'>
+            <FilterTags 
+                searchTags={searchTags} 
+                setSearchTags={setSearchTags} 
+                setQueryParam={props.setQueryParam}
+            />
+        </div>
+        </>
     );
 }
