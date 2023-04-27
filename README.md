@@ -57,7 +57,7 @@ Mobile
 ### Filter by field
 
 **The SearchContainer component allows to filter by different fields at the same time**
-![Screenshot 2023-04-27 at 12 59 52](https://user-images.githubusercontent.com/46817386/234919583-18361338-bbb9-4d95-af12-e5f742fd38f3.png)
+![Screenshot 2023-04-27 at 15 08 32](https://user-images.githubusercontent.com/46817386/234953827-76afc780-6614-4252-917a-333220728813.png)
 
 
 * Add a filter:
