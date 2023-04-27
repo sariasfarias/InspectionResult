@@ -61,24 +61,24 @@ Mobile
 
 
 * Add a filter:
-1. Select the field you want to filter by.
-2. Write the text.
-3. Press enter or click the search button.
+  1. Select the field you want to filter by.
+  2. Write the text.
+  3. Press enter or click the search button.
 
-_A tag will be created below the search bar showing the filter that was just added._
+  _A tag will be created below the search bar showing the filter that was just added._
 
-To add a new search repeat the steps.
+  To add a new search repeat the steps.
 
 * Clean a filter:
 
-1. Press the x on the tag that you want to remove.
+  1. Press the x on the tag that you want to remove.
 
 ### Navigate between pages
 
 * To advance:
-1. Click the Next button.
-_The page number is going to be updated_
+  1. Click the Next button.
+  _The page number is going to be updated_
 
 * To go back:
-1. Click the Prev button.
-_The page number is going to be updated_
+  1. Click the Prev button.
+  _The page number is going to be updated_
