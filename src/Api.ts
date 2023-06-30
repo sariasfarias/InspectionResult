@@ -14,7 +14,7 @@ export const getRestaurantsInformation = async (setData: Function, queryParam ?:
             }
         );
         const json = await apiResponse.json();
-        setData(json);
+        setData(apiResponse.ok ? json : []);
     } catch (error) {
         setData([]);
     }
